@@ -10,6 +10,19 @@
   <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="styles.53d8ac9c13ca2640bd43.css"></head>
 <body>
+<script>
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+        // REMOVE THIS - REDIRECT HAPPENED
+      }
+      else {
+        // PAGE LOADED DIRECTLY
+      }
+    })();
+  </script>
   <img class="d-none" src="../../../assets/image/welcome.jpg">
   <img class="d-none" src="../../../assets/image/background.jpg">
   <app-root></app-root>
